@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "solstizio-estate": {
+      "hosting": {
+        "solstizio-website": [
+          "solstiziodestate"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "solstizio-estate"
+  }
+}
