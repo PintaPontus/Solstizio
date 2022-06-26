@@ -100,8 +100,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "solstizio-website:build:production",
+            "firebaseProject": "solstizio-estate",
+            "firebaseHostingSite": "solstiziodestate"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
