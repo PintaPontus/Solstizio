@@ -12,14 +12,8 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import {AngularFireModule} from "@angular/fire/compat";
-import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from "@angular/material/table";
-import {MatCardModule} from "@angular/material/card";
-import {MatButtonModule} from "@angular/material/button";
-import {MatIconModule} from "@angular/material/icon";
-import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -38,11 +32,6 @@ import {MatGridListModule} from "@angular/material/grid-list";
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
     BrowserAnimationsModule,
-    MatTableModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

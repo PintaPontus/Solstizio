@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MenuService} from "./services/menu.service";
 import {Piatto} from "./interfaces/piatto";
+import {PageLink} from "./interfaces/page-link";
 
 
 @Component({
@@ -12,12 +13,17 @@ export class AppComponent {
   title = 'solstizio-website';
 
   public piatti: Piatto[] = [];
+  links: PageLink[] = [
+    {name: 'Menu', link:'/menu'},
+    {name: 'Chi Siamo', link:'/chisiamo'},
+    {name: 'Contatti', link:'/contatti'},
+  ];
 
   constructor(private menuService: MenuService) {
     menuService.piatti.subscribe({
       next: value => {
         this.piatti = value.sort((a,b) => {
-          return a.nome.localeCompare(b.nome);
+          return b.prezzo - a.prezzo;
         });
       },
       error: err => {
