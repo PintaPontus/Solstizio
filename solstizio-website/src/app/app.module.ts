@@ -14,10 +14,12 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuComponent } from './pages/menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

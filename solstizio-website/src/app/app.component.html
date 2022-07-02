@@ -1,30 +1,13 @@
 <header>
-  <div class="main-logo">
+  <div class="header-logo">
     Solstizio d'Estate
   </div>
-  <div class="main-pages">
-    <div class="main-page-link" *ngFor="let l of links">
+  <div class="header-pages-list">
+    <div class="header-page-link" *ngFor="let l of links">
       <a routerLink="{{l.link}}">{{l.name}}</a>
     </div>
   </div>
 </header>
 <div class="main-content">
-  <div class="menu-container">
-    <div class="piatto-card" *ngFor="let piatto of piatti">
-      <div class="piatto-header">
-        <div class="piatto-name">
-          {{piatto.nome}}
-        </div>
-        <div class="piatto-price">
-          {{piatto.prezzo}}
-        </div>
-      </div>
-      <img class="piatto-immagine" src="{{piatto.immagine}}" alt="{{piatto.nome}}">
-      <div class="piatto-content">
-        <div class="piatto-description">
-          {{piatto.descrizione}}
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>

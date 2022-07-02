@@ -15,10 +15,10 @@ header{
 .main-content{
   width: clamp(80vw, 1080px, 100vw);
   margin: auto;
-  padding: 1vw;
-  background-color: grey;
+  padding: 2vw;
+  background-color: gray;
 }
-.main-logo{
+.header-logo{
   display: flex;
   align-items: center;
   vertical-align: middle;
@@ -29,13 +29,13 @@ header{
   padding: 2vw;
   flex: 2;
 }
-.main-pages{
+.header-pages-list{
   display: flex;
   align-items: center;
   vertical-align: middle;
   flex: 4;
 }
-.main-page-link{
+.header-page-link{
   display: flex;
   align-items: center;
   vertical-align: middle;
@@ -44,42 +44,4 @@ header{
   text-decoration: none;
   padding: 1vw;
 }
-.menu-container{
-  width: fit-content;
-  margin: auto;
-}
-.piatto-card{
-  width: clamp(15vw, 400px, 40vw);
-  max-height: 60vw;
-  border-radius: 1vw;
-  margin: 50px;
-  background-color: white;
-  color: black;
-}
-.piatto-immagine{
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-  border: solid black;
-  border-width: 2px 0;
-}
-.piatto-descrizione{
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.piatto-header{
-  padding: 10px;
-}
-.piatto-content{
-  padding: 10px;
-}
-.piatto-button{
-  background-color: #FF8900;
-  color: black;
-  border-radius: 2em;
-}
+

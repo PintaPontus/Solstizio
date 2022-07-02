@@ -1,0 +1,9 @@
+<div class="piatto-container" *ngFor="let piatto of piatti">
+  <div class="piatto-label">
+    <h2>{{piatto.nome}}</h2>
+  </div><!--TODO: make content appear on label click-->
+  <div class="piatto-content">
+    {{piatto.nome}} - €{{piatto.prezzo}} <br>
+    {{piatto.descrizione}}
+  </div>
+</div>
