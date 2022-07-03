@@ -1,29 +1,35 @@
 header{
   background-color: black;
-  padding: 20px;
-  height: 60px;
+  box-sizing: border-box;
   width: 100vw;
+  padding: 0;
+  height: 12vh;
+  text-align: center;
 }
 @media only screen and (max-width: 1080px) {
   header{
-    text-align: center;
+
   }
 }
-.main-content{
-  width: clamp(80vw, 1080px, 100vw);
-  margin: auto;
-  padding: 2vw;
-}
 .header-logo{
-  height: 100%;
+  margin: 0 ;
+  height: 10vh;
+  //background-color: rgba(0, 191, 255, 0.2);
 }
 .header-logo-img{
   height: 100%;
 }
 .header-pages-list{
-
+  height: 2vh;
+  display: flex;
+  //background-color: rgba(255, 255, 0, 0.2);
 }
 .header-page-link{
 
+}
+.main-content{
+  padding: 5vh;
+  height: 78vh;
+  overflow: scroll;
 }
 
