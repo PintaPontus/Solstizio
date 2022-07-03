@@ -4,10 +4,10 @@ import {Piatto} from "../../interfaces/piatto";
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  templateUrl: './prodotti.component.html',
+  styleUrls: ['./prodotti.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class ProdottiComponent implements OnInit {
 
   public piatti: Piatto[] = [];
 

@@ -13,7 +13,8 @@ export class AppComponent {
   title = 'solstizio-website';
 
   links: PageLink[] = [
-    {name: 'Menu', link:'/menu'},
+    {name: 'I Nostri Prodotti', link:'/prodotti'},
+    {name: 'Eventi', link:'/v'},
     {name: 'Chi Siamo', link:'/chisiamo'},
     {name: 'Contatti', link:'/contatti'},
   ];
