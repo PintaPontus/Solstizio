@@ -3,12 +3,23 @@ header{
   box-sizing: border-box;
   width: 100vw;
   padding: 0;
-  height: 12vh;
+  height: 15vh;
   text-align: center;
+}
+@media only screen and (min-width: 1080px) {
+  header{
+    height: 15vh;
+  }
+  .header-pages-list{
+    display: flex;
+  }
 }
 @media only screen and (max-width: 1080px) {
   header{
-
+    height: 10vh;
+  }
+  .header-pages-list{
+    display: none;
   }
 }
 .header-logo{
@@ -17,19 +28,25 @@ header{
   //background-color: rgba(0, 191, 255, 0.2);
 }
 .header-logo-img{
-  height: 100%;
+  height: 8vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 .header-pages-list{
-  height: 2vh;
-  display: flex;
+  height: 5vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
   //background-color: rgba(255, 255, 0, 0.2);
 }
 .header-page-link{
-
+  font-size: 1.5em;
+  padding: 0 3vw;
 }
 .main-content{
   padding: 5vh;
-  height: 78vh;
+  height: 75vh;
   overflow: scroll;
 }
 
