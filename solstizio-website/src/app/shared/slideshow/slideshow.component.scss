@@ -1,5 +1,28 @@
-.ss-img{
+.ss-container{
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
+}
+.ss-slide{
+  width: 100%;
+  height: 100%;
+  transition: transform 2s, width 1s;
+  background-color: rgba(255, 128, 0, 0.5);
+  display:inline-block;
+  overflow: hidden;
+}
+.ss-img{
+  width: auto;
+  height: 100%;
+  opacity: 0.5;
   object-fit: cover;
+  display: inline-block;
+}
+.hidden{
+  transform: translate(-100vw, 0);
+}
+.next{
+  transition: transform 0s;
+  transform: translate(100vw, 0);
 }

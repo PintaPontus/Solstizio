@@ -1,1 +1,11 @@
-<img *ngFor="let img of imgs" class="ss-img" [src]="img" alt="">
+<div class="ss-container">
+  <div class="ss-slide"
+       *ngFor="let img of imgs; let i = index"
+       [ngClass]="
+     {'hidden' : slideIndex!==i,
+      'next': ((slideIndex+1)%imgs.length)===i}">
+    <img class="ss-img"
+      [src]="img"
+      alt="">
+  </div>
+</div>
