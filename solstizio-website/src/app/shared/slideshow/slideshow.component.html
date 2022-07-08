@@ -1,10 +1,8 @@
-<div class="ss-container">
-  <div class="ss-slide"
-       *ngFor="let s of slides; let i = index"
-       [ngClass]="
+<div class="ss-slide"
+     *ngFor="let s of slides; let i = index"
+     [ngClass]="
      {'ss-hidden' : slideIndex!==i}">
-    <img class="ss-img"
-      [src]="s.backgroundUrl"
-      alt="">
-  </div>
+  <img class="ss-img"
+       [src]="s.backgroundUrl"
+       [alt]="s.title">
 </div>

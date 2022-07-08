@@ -1,30 +1,27 @@
-.ss-container{
-  position: relative;
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border: 1px solid white;
 }
 .ss-slide{
-  width: 100%;
-  height: 100%;
-  //background-color: rgba(255, 128, 0, 0.5);
-  display:inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 .ss-img{
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  object-fit: cover;
-  display: inline-block;
+  opacity: 0.65;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 .ss-hidden{
   display: none;
 }
 .ss-next{
-
+  right: 0;
 }
 .ss-previous{
-
+  left: 0;
 }

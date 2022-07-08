@@ -1,3 +1,4 @@
 .home-ss{
-  height: 10vh;
+  height: clamp(30vh, 50vw, 75vh);
+  background-color: #f87620;
 }

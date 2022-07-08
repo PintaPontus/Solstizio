@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 export class SlideshowComponent implements OnInit {
   @Input() slides: Slide[] = [];
-  @Input() delay: number = 5000;
+  @Input() delay: number = 1000;
   slideIndex: number = 0;
 
   constructor() { }
