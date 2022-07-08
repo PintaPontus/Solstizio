@@ -11,10 +11,11 @@ import {PageLink} from "./interfaces/page-link";
 })
 export class AppComponent {
   title = 'solstizio-website';
+  showMobileMenu: boolean = false;
 
   links: PageLink[] = [
     {name: 'I Nostri Prodotti', link:'/prodotti'},
-    {name: 'Eventi', link:'/v'},
+    {name: 'Eventi', link:'/eventi'},
     {name: 'Chi Siamo', link:'/chisiamo'},
     {name: 'Contatti', link:'/contatti'},
   ];
@@ -22,4 +23,11 @@ export class AppComponent {
   constructor() {
   }
 
+  toggleMobileMenu(){
+    this.showMobileMenu = !this.showMobileMenu
+  }
+
+  hideMobileMenu() {
+    this.showMobileMenu = false;
+  }
 }

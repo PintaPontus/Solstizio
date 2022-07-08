@@ -5,8 +5,9 @@ import {Component, Input, OnInit} from '@angular/core';
   templateUrl: './slideshow.component.html',
   styleUrls: ['./slideshow.component.scss']
 })
+
 export class SlideshowComponent implements OnInit {
-  @Input() imgs: string[] = [];
+  @Input() slides: Slide[] = [];
   @Input() delay: number = 5000;
   slideIndex: number = 0;
 
@@ -18,8 +19,13 @@ export class SlideshowComponent implements OnInit {
 
   startCounter(){
     setInterval(() => {
-      this.slideIndex = (this.slideIndex + 1) % this.imgs.length;
+      this.slideIndex = (this.slideIndex + 1) % this.slides.length;
     }, this.delay);
   }
 
+}
+
+export interface Slide {
+  title: string,
+  backgroundUrl: string,
 }

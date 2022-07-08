@@ -1,11 +1,10 @@
 <div class="ss-container">
   <div class="ss-slide"
-       *ngFor="let img of imgs; let i = index"
+       *ngFor="let s of slides; let i = index"
        [ngClass]="
-     {'hidden' : slideIndex!==i,
-      'next': ((slideIndex+1)%imgs.length)===i}">
+     {'ss-hidden' : slideIndex!==i}">
     <img class="ss-img"
-      [src]="img"
+      [src]="s.backgroundUrl"
       alt="">
   </div>
 </div>

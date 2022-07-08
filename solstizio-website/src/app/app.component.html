@@ -1,12 +1,21 @@
 <header>
-  <div class="header-logo">
-    <a routerLink="/home">
-      <img class="header-logo-img" src="assets/SolstizioBorder.png" alt="Solstizio d'Estate">
-    </a>
+  <div class="header-title-bar">
+    <div class="header-menu">
+      <a class="mat-icon" (click)="toggleMobileMenu()">
+        <img src="assets/menu_FILL0_wght400_GRAD0_opsz48.svg">
+      </a>
+    </div>
+    <div class="header-logo">
+      <a routerLink="/home" (click)="hideMobileMenu()">
+        <img class="header-logo-img" src="assets/Solstizio.png" alt="Solstizio d'Estate">
+      </a>
+    </div>
   </div>
-  <div class="header-pages-list">
-    <div class="header-page-link" *ngFor="let l of links">
-      <a routerLink="{{l.link}}">{{l.name}}</a>
+  <div class="header-navbar"
+  [ngClass]="{'show': showMobileMenu}">
+    <div class="header-navlink" *ngFor="let l of links">
+      <a routerLink="{{l.link}}"
+      (click)="hideMobileMenu()">{{l.name}}</a>
     </div>
   </div>
 </header>

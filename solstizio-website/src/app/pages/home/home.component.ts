@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Slide} from "../../shared/slideshow/slideshow.component";
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  ssImgs: string[] = [
-    "https://www.macelleriadandrea.it/wp-content/uploads/2018/04/reale.jpg",
-    "assets/SolstizioBasic.png",
-    "assets/SolstizioBorder.png",
+  slides: Slide[] = [
+    {
+      title: "home",
+      backgroundUrl : "assets/Solstizio.png",
+    },
+    {
+      title: "prodotti",
+      backgroundUrl : "https://www.macelleriadandrea.it/wp-content/uploads/2018/04/reale.jpg",
+    },
   ];
 
   constructor() { }
