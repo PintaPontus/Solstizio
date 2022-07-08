@@ -19,9 +19,21 @@
 .ss-hidden{
   display: none;
 }
-.ss-next{
-  right: 0;
+
+.ss-arrow{
+    position: absolute;
+    font-size: clamp(2em, 15vw, 20vh);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
 }
+
+.ss-next{
+    margin-left: auto;
+    right: 3vw;
+}
+
 .ss-previous{
-  left: 0;
+    margin-right: auto;
+    left: 3vw;
 }

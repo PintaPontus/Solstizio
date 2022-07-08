@@ -1,8 +1,10 @@
 <div class="ss-slide"
-     *ngFor="let s of slides; let i = index"
-     [ngClass]="
-     {'ss-hidden' : slideIndex!==i}">
-  <img class="ss-img"
-       [src]="s.backgroundUrl"
-       [alt]="s.title">
+    *ngFor="let s of slides; let i = index"
+    [ngClass]="
+    {'ss-hidden' : slideIndex!==i}">
+    <img class="ss-img"
+        [src]="s.backgroundUrl"
+        [alt]="s.title">
 </div>
+<div class="ss-arrow ss-previous" (click)="previousSlide()"><</div>
+<div class="ss-arrow ss-next" (click)="nextSlide()">></div>
