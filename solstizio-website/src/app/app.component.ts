@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import {MenuService} from "./services/menu.service";
-import {Piatto} from "./interfaces/piatto";
-import {PageLink} from "./interfaces/page-link";
-
 
 @Component({
   selector: 'app-root',
@@ -23,11 +19,16 @@ export class AppComponent {
   constructor() {
   }
 
-  toggleMobileMenu(){
-    this.showMobileMenu = !this.showMobileMenu
-  }
+    toggleMobileMenu() {
+        this.showMobileMenu = !this.showMobileMenu
+    }
 
-  hideMobileMenu() {
-    this.showMobileMenu = false;
-  }
+    hideMobileMenu() {
+        this.showMobileMenu = false;
+    }
+}
+
+export interface PageLink {
+    name: string;
+    link: string;
 }
