@@ -14,17 +14,18 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
-import { EventiComponent } from './pages/eventi/eventi.component';
+import {HomeComponent} from './pages/home/home.component';
+import {ProdottiComponent} from "./pages/prodotti/prodotti.component";
+import {EventiComponent} from './pages/eventi/eventi.component';
 import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import {SlideshowComponent} from './shared/slideshow/slideshow.component';
-import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
+        ProdottiComponent,
         EventiComponent,
         ChiSiamoComponent,
         ContattiComponent,
@@ -43,7 +44,6 @@ import {GoogleMapsModule} from "@angular/google-maps";
         provideRemoteConfig(() => getRemoteConfig()),
         provideStorage(() => getStorage()),
         BrowserAnimationsModule,
-        GoogleMapsModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
