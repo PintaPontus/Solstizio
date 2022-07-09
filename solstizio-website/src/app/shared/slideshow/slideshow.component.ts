@@ -31,17 +31,13 @@ export class SlideshowComponent implements OnInit {
 
     nextSlide() {
         clearInterval(this.clock);
-        this.clock = setInterval(() => {
-            this.incrementCounter();
-        }, this.delay);
+        this.startCounter();
         this.slideIndex = (this.slideIndex + 1) % this.slides.length;
     }
 
     previousSlide() {
         clearInterval(this.clock);
-        this.clock = setInterval(() => {
-            this.incrementCounter();
-        }, this.delay);
+        this.startCounter();
         this.slideIndex = (this.slideIndex + this.slides.length - 1) % this.slides.length;
     }
 
