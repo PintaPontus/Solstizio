@@ -19,16 +19,20 @@ export class SlideshowComponent implements OnInit {
         this.startCounter();
     }
 
+    incrementCounter() {
+        this.slideIndex = (this.slideIndex + 1) % this.slides.length;
+    }
+
     startCounter() {
         this.clock = setInterval(() => {
-            this.slideIndex = (this.slideIndex + 1) % this.slides.length;
+            this.incrementCounter();
         }, this.delay);
     }
 
     nextSlide() {
         clearInterval(this.clock);
         this.clock = setInterval(() => {
-            this.slideIndex = (this.slideIndex + 1) % this.slides.length;
+            this.incrementCounter();
         }, this.delay);
         this.slideIndex = (this.slideIndex + 1) % this.slides.length;
     }
@@ -36,7 +40,7 @@ export class SlideshowComponent implements OnInit {
     previousSlide() {
         clearInterval(this.clock);
         this.clock = setInterval(() => {
-            this.slideIndex = (this.slideIndex + 1) % this.slides.length;
+            this.incrementCounter();
         }, this.delay);
         this.slideIndex = (this.slideIndex + this.slides.length - 1) % this.slides.length;
     }
