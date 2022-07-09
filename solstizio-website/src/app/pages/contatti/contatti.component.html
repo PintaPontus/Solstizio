@@ -1,1 +1,35 @@
-<p>contatti works!</p>
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11877.941162203528!2d8.630291737110475!3d39.332107552284064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e773ecbcad274d%3A0xc0e95b94b9d0a3cc!2sSolstizio%20D&#39;estate!5e0!3m2!1sit!2sit!4v1657370374997!5m2!1sit!2sit"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="co-map">
+</iframe>
+<div class="co-contacts">
+    <div>
+        <div class="co-info-title">Indirizzo:</div>
+        <div class="co-info-data">{{contacts.address}}</div>
+    </div>
+    <div>
+        <div class="co-info-title">Telefono:</div>
+        <div class="co-info-data">
+            <a class="co-link" href="{{'tel:'+contacts.phone}}">{{contacts.phone}}</a>
+            <a class="mat-icon" href="{{'tel:'+contacts.phone}}"><img class="phone-icon" src="assets/mat-phone.png"
+                                                                      alt="telefono"></a>
+        </div>
+    </div>
+    <div>
+        <div class="co-info-title">Facebook:</div>
+        <div class="co-info-data">
+            <img class="social-logo" src="assets/fb-logo.png" alt="facebook">
+            <a class="co-link" href="{{contacts.fbLink}}">{{contacts.fb}}</a>
+        </div>
+    </div>
+    <div>
+        <div class="co-info-title">Instagram:</div>
+        <div class="co-info-data">
+            <img class="social-logo" src="assets/ig-logo.png" alt="instagram">
+            <a class="co-link" href="{{contacts.igLink}}">{{contacts.ig}}</a>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,3 @@
-header{
-  background-color: black;
-  box-sizing: border-box;
-  width: 100vw;
-  padding: 0;
-}
 @media only screen and (min-width: 1080px) {
   .header-navbar{
     display: flex;
@@ -25,11 +19,18 @@ header{
     height: auto;
   }
 }
-.header-title-bar{
-  display: flex;
-  height: 8vh;
-  justify-content: center;
-  align-content: stretch;
+header {
+    background-color: black;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0;
+}
+
+.header-title-bar {
+    display: flex;
+    height: 8vh;
+    justify-content: center;
+    align-content: stretch;
 }
 .header-menu{
   position: absolute;

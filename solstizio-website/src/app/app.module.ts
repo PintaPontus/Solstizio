@@ -18,32 +18,34 @@ import { HomeComponent } from './pages/home/home.component';
 import { EventiComponent } from './pages/eventi/eventi.component';
 import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
-import { SlideshowComponent } from './shared/slideshow/slideshow.component';
+import {SlideshowComponent} from './shared/slideshow/slideshow.component';
+import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    EventiComponent,
-    ChiSiamoComponent,
-    ContattiComponent,
-    SlideshowComponent
-  ],
-  imports: [
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    BrowserModule,
-    AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
-    provideMessaging(() => getMessaging()),
-    provideRemoteConfig(() => getRemoteConfig()),
-    provideStorage(() => getStorage()),
-    BrowserAnimationsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        EventiComponent,
+        ChiSiamoComponent,
+        ContattiComponent,
+        SlideshowComponent
+    ],
+    imports: [
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
+        BrowserModule,
+        AppRoutingModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
+        provideFunctions(() => getFunctions()),
+        provideMessaging(() => getMessaging()),
+        provideRemoteConfig(() => getRemoteConfig()),
+        provideStorage(() => getStorage()),
+        BrowserAnimationsModule,
+        GoogleMapsModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
