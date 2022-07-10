@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
       backgroundUrl : "https://www.macelleriadandrea.it/wp-content/uploads/2018/04/reale.jpg",
     },
     {
-      title: "home",
-      backgroundUrl : "assets/Solstizio.png",
+        title: "home",
+        backgroundUrl: "assets/solstizio.png",
     },
   ];
 

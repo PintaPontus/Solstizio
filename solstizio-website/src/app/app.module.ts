@@ -21,6 +21,7 @@ import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import {SlideshowComponent} from './shared/slideshow/slideshow.component';
 import {AlertComponent} from './shared/alert/alert.component';
+import {ProdottoComponent} from './pages/prodotti/prodotto/prodotto.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import {AlertComponent} from './shared/alert/alert.component';
         ChiSiamoComponent,
         ContattiComponent,
         SlideshowComponent,
-        AlertComponent
+        AlertComponent,
+        ProdottoComponent
     ],
     imports: [
         AngularFireModule.initializeApp(environment.firebase),
