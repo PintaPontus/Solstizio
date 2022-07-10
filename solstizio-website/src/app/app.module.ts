@@ -20,6 +20,7 @@ import {EventiComponent} from './pages/eventi/eventi.component';
 import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import {SlideshowComponent} from './shared/slideshow/slideshow.component';
+import {AlertComponent} from './shared/alert/alert.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import {SlideshowComponent} from './shared/slideshow/slideshow.component';
         EventiComponent,
         ChiSiamoComponent,
         ContattiComponent,
-        SlideshowComponent
+        SlideshowComponent,
+        AlertComponent
     ],
     imports: [
         AngularFireModule.initializeApp(environment.firebase),

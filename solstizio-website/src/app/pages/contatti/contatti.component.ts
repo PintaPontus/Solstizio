@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ContattiComponent implements OnInit {
     contacts: Contact = {
-        address: "Via Alcide De Gasperi, 09015, Domusnovas SU",
+        address: "Via Alcide De Gasperi, 09015 Domusnovas SU",
         phone: "+39 3318567217",
         fb: "Solstizio D'estate",
         fbLink: "https://www.facebook.com/profile.php?id=100057586803323",
