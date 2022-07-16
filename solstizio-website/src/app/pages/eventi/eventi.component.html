@@ -1,1 +1,5 @@
 <app-alert type="build" msg='Pagina in costruzione'></app-alert>
+<div *ngFor="let ev of eventi">
+    <img [src]="ev.img | fireImgSrc | async" alt="">
+    CIAO
+</div>
