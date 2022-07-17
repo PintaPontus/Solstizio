@@ -1,5 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {AngularFireStorage} from "@angular/fire/compat/storage";
+import {firstValueFrom} from "rxjs";
 
 @Pipe({
     name: 'fireImgSrc'
@@ -12,7 +13,7 @@ export class FireImgSrcPipe implements PipeTransform {
         const subUrl = this.storage.ref(value).getDownloadURL();
         let url: string = "";
 
-        await subUrl.toPromise().then(r => url = r);
+        await firstValueFrom(subUrl).then(r => url = r);
 
         return url;
     }
