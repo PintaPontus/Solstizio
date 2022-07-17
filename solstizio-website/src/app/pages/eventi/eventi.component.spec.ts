@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EventiComponent } from './eventi.component';
+import {EventiComponent} from './eventi.component';
 
 describe('EventiComponent', () => {
-  let component: EventiComponent;
-  let fixture: ComponentFixture<EventiComponent>;
+    let component: EventiComponent;
+    let fixture: ComponentFixture<EventiComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ EventiComponent ]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [EventiComponent]
+        })
+            .compileComponents();
 
-    fixture = TestBed.createComponent(EventiComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(EventiComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

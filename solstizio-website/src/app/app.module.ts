@@ -53,7 +53,7 @@ import {FireImgSrcPipe} from './pipes/fire-img-src.pipe';
         provideStorage(() => getStorage()),
         BrowserAnimationsModule,
     ],
-    providers: [{provide: BUCKET, useValue: 'solstizio-estate.appspot.com'}],
+    providers: [{provide: BUCKET, useValue: environment.firebase.storageBucket}],
     bootstrap: [AppComponent]
 })
 export class AppModule {

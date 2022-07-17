@@ -1,26 +1,29 @@
-:host{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.ss-slide{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.ss-img{
-  opacity: 0.65;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.ss-hidden{
-  display: none;
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.ss-arrow{
+.ss-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ss-img {
+    opacity: 0.65;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ss-hidden {
+    display: none;
+}
+
+.ss-arrow {
     position: absolute;
     font-size: clamp(2em, 15vw, 20vh);
     cursor: pointer;
@@ -28,12 +31,12 @@
     user-select: none;
 }
 
-.ss-next{
+.ss-next {
     margin-left: auto;
     right: 3vw;
 }
 
-.ss-previous{
+.ss-previous {
     margin-right: auto;
     left: 3vw;
 }

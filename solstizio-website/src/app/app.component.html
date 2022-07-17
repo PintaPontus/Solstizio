@@ -1,24 +1,24 @@
 <header>
-  <div class="header-title-bar">
-    <div class="header-menu">
-      <a class="mat-icon" (click)="toggleMobileMenu()">
-        <img src="assets/mat-menu.png">
-      </a>
+    <div class="header-title-bar">
+        <div class="header-menu">
+            <a class="mat-icon" (click)="toggleMobileMenu()">
+                <img src="assets/mat-menu.png">
+            </a>
+        </div>
+        <div class="header-logo">
+            <a routerLink="/home" (click)="hideMobileMenu()">
+                <img class="header-logo-img" src="../assets/solstizio.png" alt="Solstizio d'Estate">
+            </a>
+        </div>
     </div>
-    <div class="header-logo">
-      <a routerLink="/home" (click)="hideMobileMenu()">
-        <img class="header-logo-img" src="../assets/solstizio.png" alt="Solstizio d'Estate">
-      </a>
+    <div class="header-navbar"
+         [ngClass]="{'show': showMobileMenu}">
+        <div class="header-navlink" *ngFor="let l of links">
+            <a routerLink="{{l.link}}"
+               (click)="hideMobileMenu()">{{l.name}}</a>
+        </div>
     </div>
-  </div>
-  <div class="header-navbar"
-  [ngClass]="{'show': showMobileMenu}">
-    <div class="header-navlink" *ngFor="let l of links">
-      <a routerLink="{{l.link}}"
-      (click)="hideMobileMenu()">{{l.name}}</a>
-    </div>
-  </div>
 </header>
 <div class="main-content">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>
