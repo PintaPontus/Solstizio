@@ -1,0 +1,77 @@
+:host {
+    background-color: grey;
+    border-radius: 2em;
+    height: clamp(10vh, 30vw, 35vh);
+    padding: 2vh;
+    display: flex;
+    align-items: stretch;
+    gap: 1vw;
+}
+
+@media only screen and (min-width: 1080px) {
+    .ev-description {
+        flex: 4;
+        display: flex;
+        align-items: center;
+    }
+    .ev-title {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .ev-description {
+        display: none;
+    }
+}
+
+.ev-img-con {
+    text-align: center;
+}
+
+.ev-img {
+    height: 100%;
+    border-radius: 1em;
+    border: 0.1px solid #f87620;
+}
+
+.ev-content {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 100%;
+    gap: 1vh;
+}
+
+.ev-date {
+    font-size: 1.12em;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.ev-title {
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.ev-share {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5vw;
+}
+
+.ev-share-btn {
+    height: clamp(3vh, 5vw, 5vh);
+}
+
+.ev-share-img {
+    height: 100%;
+}

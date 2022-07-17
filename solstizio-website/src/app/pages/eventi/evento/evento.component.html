@@ -1,0 +1,27 @@
+<a [routerLink]="'./'+evento!.id" class="ev-img-con">
+    <img [src]="evento!.img | fireImgSrc | async" class="ev-img" alt="">
+</a>
+<div class="ev-content">
+    <div class="ev-date">{{evento!.orario.seconds * 1000 | date: 'dd/MM/yy - HH:mm'}}</div>
+    <a class="ev-title">{{evento!.nome}}</a>
+    <div class="ev-description">
+        {{evento!.descrizione}}
+    </div>
+    <div class="ev-share">
+        <!--TODO: Change link-->
+        <a [href]="sanitize('whatsapp://send?text=' +
+          getRoute() + evento!.id + ' '+
+          environment.solstizio.shareEventMessage)"
+           data-action="share/whatsapp/share"
+           target="_blank"
+           class="ev-share-btn">
+            <img class="ev-share-img" src="assets/wa-logo.png" alt="WhatsApp">
+        </a>
+        <!--        <a class="ev-share-btn">-->
+        <!--            <img class="ev-share-img" src="assets/ig-logo.png" alt="Instagram">-->
+        <!--        </a>-->
+        <!--        <a class="ev-share-btn">-->
+        <!--            <img class="ev-share-img" src="assets/fb-logo.png" alt="Facebook">-->
+        <!--        </a>-->
+    </div>
+</div>

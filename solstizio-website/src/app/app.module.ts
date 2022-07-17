@@ -25,6 +25,7 @@ import {ContattiComponent} from './pages/contatti/contatti.component';
 import {SlideshowComponent} from './shared/slideshow/slideshow.component';
 import {AlertComponent} from './shared/alert/alert.component';
 import {FireImgSrcPipe} from './pipes/fire-img-src.pipe';
+import {EventoComponent} from './pages/eventi/evento/evento.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import {FireImgSrcPipe} from './pipes/fire-img-src.pipe';
         ContattiComponent,
         SlideshowComponent,
         AlertComponent,
-        FireImgSrcPipe
+        FireImgSrcPipe,
+        EventoComponent
     ],
     imports: [
         AngularFireModule.initializeApp(environment.firebase),

@@ -16,6 +16,7 @@ export const environment = {
     solstizio: {
         eventsCollPath: 'eventi',
         webpageTitle: 'solstizio-project',
+        shareEventMessage: "Vieni con me al Solstizio d'Estate",
     },
     production: false
 };

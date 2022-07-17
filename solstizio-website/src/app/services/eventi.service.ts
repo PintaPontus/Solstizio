@@ -23,10 +23,11 @@ export class EventiService {
 
 export interface Evento {
     id: string;
-    nome: string,
+    nome: string;
+    descrizione: string;
     orario: {
-        seconds: number,
-        nanoseconds: number,
+        seconds: number;
+        nanoseconds: number;
     },
-    img: string,
+    img: string;
 }
