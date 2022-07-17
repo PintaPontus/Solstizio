@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EventiService, Evento} from "../../services/eventi.service";
+import {firstValueFrom} from "rxjs";
 
 @Component({
     selector: 'app-eventi',
@@ -14,9 +15,10 @@ export class EventiComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.eventiService.getEventi()
-            .subscribe((data: Evento[]) => {
+        firstValueFrom(this.eventiService.getEventi())
+            .then((data: Evento[]) => {
                 this.eventi = data;
+                console.log(data);
             })
     }
 

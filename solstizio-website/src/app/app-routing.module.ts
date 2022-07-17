@@ -11,6 +11,7 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'prodotti', component: ProdottiComponent},
     {path: 'eventi', component: EventiComponent},
+    {path: 'eventi/:id', component: ContattiComponent},
     {path: 'chisiamo', component: ChiSiamoComponent},
     {path: 'contatti', component: ContattiComponent},
     {path: '**', redirectTo: 'home'},

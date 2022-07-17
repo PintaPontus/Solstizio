@@ -2,6 +2,7 @@ import {Injectable, Query} from '@angular/core';
 import {AngularFireStorage} from "@angular/fire/compat/storage";
 import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/compat/firestore";
 import {environment} from "../../environments/environment";
+import {Timestamp} from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -21,7 +22,11 @@ export class EventiService {
 }
 
 export interface Evento {
+    id: string;
     nome: string,
-    data: Date,
+    orario: {
+        seconds: number,
+        nanoseconds: number,
+    },
     img: string,
 }

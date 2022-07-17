@@ -1,5 +1,15 @@
-<app-alert type="build" msg='Pagina in costruzione'></app-alert>
-<div *ngFor="let ev of eventi">
-    <img [src]="ev.img | fireImgSrc | async" alt="">
-    CIAO
+<div class="ev-container">
+    <div class="ev-cards-list">
+        <div *ngFor="let ev of eventi" class="ev-card">
+            <a [routerLink]="'./'+ev.id" class="ev-img-con">
+                <img [src]="ev.img | fireImgSrc | async" class="ev-img" alt="">
+            </a>
+            <div class="ev-content">
+                <div class="ev-date">{{ev.orario.seconds * 1000 | date: 'dd/MM/yy'}}</div>
+                <a class="ev-title">{{ev.nome}}</a>
+                <div class="ev-share">Condividi</div>
+            </div>
+        </div>
+    </div>
 </div>
+<app-alert type="build" msg='Pagina in costruzione'></app-alert>
